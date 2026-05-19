@@ -88,8 +88,8 @@ def generar_cinta(lugar_x, lugar_y, aplicar_ruido=False):
             cinta[(inicio_y + i) * 34 + (inicio_x + j)] = plantilla[i * 5 + j]
             
     if aplicar_ruido:
-        # 5% de polvo ambiental en toda la lente
-        for idx in random.sample(range(34 * 34), int(34 * 34 * 0.05)):
+        # 10% de polvo ambiental en toda la lente
+        for idx in random.sample(range(34 * 34), int(34 * 34 * 0.10)):
             cinta[idx] *= -1 
     return cinta
 
